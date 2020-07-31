@@ -9,7 +9,6 @@ public class S02 {
      * @return speed in meters per second
      */
     public static double speed(double distance, double time) {
-        // TODO
         return distance/time; 
      }
 }
