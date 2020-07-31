@@ -1,4 +1,4 @@
-package Patrizia;
+package patrizia;
 
 public class Hello {
 	public static void main(String[] args) {
