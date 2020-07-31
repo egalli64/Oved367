@@ -11,7 +11,6 @@ public class S02 {
      */
     public static double speed(double distance, double time) {
     	if ((time<0)||(distance<0)) {
-    		System.out.println("Non consistent input");
     		return Double.NEGATIVE_INFINITY;
     	}
     	else {
@@ -46,7 +45,6 @@ public class S02 {
      */
     public static double engineCapacity(double bore, double stroke, int nr) {
     	if ((bore<0)||(stroke<0)||(nr<1)) {
-    		System.out.println("Non consistent input");
 			return Double.NEGATIVE_INFINITY;
     	} else {
     		return (Math.pow(bore/2, 2)*Math.PI*stroke*nr)/1000;
