@@ -3,10 +3,11 @@ package emanuele;
 public class S02 {
 	/**
 	 * Average speed
+	 * TBD: throwing an exception in case of bad input
 	 * 
 	 * @param distance in meters
 	 * @param time     in seconds
-	 * @return speed in meters per second or -1 if ...
+	 * @return speed in meters per second or -1 for bad input
 	 */
 	public static double speed(double distance, double time) {
 		if (time < 0.0 || distance < 0.0) {
