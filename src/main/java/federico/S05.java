@@ -139,7 +139,7 @@ public class S05 {
 	 * @return the average
 	 */
 	public static double average(int[] data) {
-		int sum = 0;
+		double sum = 0;
 		for (int i = 0; i < data.length; i++) {
 			sum += data[i];
 		}
