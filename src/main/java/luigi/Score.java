@@ -14,10 +14,8 @@ public class Score {
     	int result = 0;
     	if (d<=1)
     		result = 10;
-    }	else if (d>1.0 && d>5.0)
-    		result = 5;
-    
-    	
-        return 0;
+    	else result = 5;
+    	return 30;
     }
 }
+    	
