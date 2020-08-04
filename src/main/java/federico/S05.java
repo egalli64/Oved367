@@ -17,7 +17,6 @@ public class S05 {
 	
 
 	private static int length(String s) {			//	-> why "private" here ??  //
-		// Auto-generated method stub  							---	??? ---
 		char [] c = s.toCharArray();
 		
 		return c.length;
