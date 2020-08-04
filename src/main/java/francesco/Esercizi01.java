@@ -128,7 +128,7 @@ public class Esercizi01 {
 	}
 
 	private static int getSingle(int[] array) {
-		int max = -1;
+		int max = array[0];
 		int res = 0;
 		for (int i = 0; i < array.length; i++) { // find the maximum value
 			if (array[i] > max) {
