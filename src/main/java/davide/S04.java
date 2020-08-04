@@ -107,28 +107,17 @@ public class S04 {
 	 * @return the Fibonacci number of value, or zero
 	 */
 	public static long fibonacci(int value) {
-		if(value==0) {
-			return value;
+		long fibon;
+		if (value < 0) {
+			fibon = 0;
+		} else if (value == 0) {
+			fibon = 0;
+		} else if (value == 1){
+			fibon = 1;
+		} else {
+			fibon = fibonacci(value-2) + fibonacci(value-1);
 		}
-		else if(value==1) {
-			return  '0' + '1';
-		}
-		else {
-			long Fib=0;
-			long x1=1, x2 =1, x0=0;
-			while(value>=Fib && value!=0 &&value!=1) {
-				Fib=x1+x2;
-				x0=x1;
-				x1=x2;
-				x2=Fib;
-			}
-			if(value==Fib) {
-				return x0 & x1 ;
-			}
-			else {
-				return 0;
-			}
-		}
+		return fibon;
 	}
 
 	/**
