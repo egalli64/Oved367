@@ -40,9 +40,8 @@ public class S02 {
      * @return the engine capacity in cm^3
      */
     public static double engineCapacity(double bore, double stroke, int nr) {
-    	double powRadius = Math.pow(bore/20,2);
-    	double s = stroke/10;
-        return Math.PI*powRadius*s*nr;
+    	double powRadius = Math.pow(bore/2,2);
+        return Math.PI*(powRadius/100)*(stroke/10)*nr;
     }
 
     /**
@@ -52,8 +51,15 @@ public class S02 {
      * @return sum of digits
      */
     public static int digitSum(int value) {
-        // TODO
-        return 0;
+        int sum = 0;
+        value = Math.abs(value);
+        
+        while(value!=0) {
+        	sum += value % 10;
+        	value /= 10;
+        }
+        
+        return sum;
     }
 
     /**

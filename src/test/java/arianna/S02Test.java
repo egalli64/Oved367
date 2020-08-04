@@ -50,28 +50,28 @@ class S02Test {
 
         assertThat(actual, closeTo(1290.252, 0.001));
     }
-//
-//    @Test
-//    void digitSumPositive() {
-//        int actual = S02.digitSum(123);
-//
-//        assertThat(actual, is(6));
-//    }
-//
-//    @Test
-//    void digitSumZero() {
-//        int actual = S02.digitSum(0);
-//
-//        assertThat(actual, is(0));
-//    }
-//
-//    @Test
-//    void digitSumNegative() {
-//        int actual = S02.digitSum(-123);
-//
-//        assertThat(actual, is(6));
-//    }
-//
+
+    @Test
+    void digitSumPositive() {
+        int actual = S02.digitSum(123);
+
+        assertThat(actual, is(6));
+    }
+
+    @Test
+    void digitSumZero() {
+        int actual = S02.digitSum(0);
+
+        assertThat(actual, is(0));
+    }
+
+    @Test
+    void digitSumNegative() {
+        int actual = S02.digitSum(-123);
+
+        assertThat(actual, is(6));
+    }
+
     @Test
     void scoreTen() {
         int actual = S02.score(0.1, -0.1);
