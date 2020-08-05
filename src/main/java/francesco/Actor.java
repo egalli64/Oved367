@@ -4,7 +4,7 @@ public abstract class Actor {
 	private String name;
 	private int strength;
 	private boolean isWizard;
-	int numberOfPotions = 0;
+	private int numberOfPotions = 0;
 	static int numberOfActors = 0;
 
 	public Actor(String name, int strength, boolean isWizard) {
@@ -16,6 +16,14 @@ public abstract class Actor {
 
 	public Actor() {
 		this("No name", 1, false);
+	}
+
+	public int getNumberOfPotions() {
+		return this.numberOfPotions;
+	}
+
+	public void setNumberOfPotions(int numberOfPotions) {
+		this.numberOfPotions = numberOfPotions;
 	}
 
 	public int getStrength() {

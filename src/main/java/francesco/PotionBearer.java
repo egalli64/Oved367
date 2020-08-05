@@ -1,6 +1,7 @@
 package francesco;
 
 public interface PotionBearer {
-void getPotion();
+void getPotions(int n);
+void addOnePotion();
 void throwPotion(Actor defender);
 }

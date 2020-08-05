@@ -1,6 +1,6 @@
 package francesco;
 
-public class Warrior extends Actor implements PotionBearer{
+public class Warrior extends Actor implements PotionBearer {
 	public Warrior() {
 		this("No name", 10);
 	}
@@ -19,13 +19,21 @@ public class Warrior extends Actor implements PotionBearer{
 			return true;
 		}
 	}
-	public void getPotion() {
-		this.numberOfPotions++;
+
+	public void addOnePotion() {
+		int y = this.getNumberOfPotions() + 1;
+		this.setNumberOfPotions(y);
 	}
+
+	public void getPotions(int n) {
+		this.setNumberOfPotions(n);
+	}
+
 	public void throwPotion(Actor defender) {
-		if(this.numberOfPotions>0 && defender instanceof Wizard) {
+		if (this.getNumberOfPotions() > 0 && defender instanceof Wizard) {
 			defender.setWizard(false);
-			this.numberOfPotions--;
+			int y = this.getNumberOfPotions();
+			this.setNumberOfPotions(y - 1);
 		}
 	}
 

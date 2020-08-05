@@ -31,7 +31,7 @@ public class Main {
 		}
 		Wizard mago = new Wizard("Mago", 3);
 		Warrior guerriero = new Warrior("Francesco", 12);
-		guerriero.getPotion();
+		guerriero.addOnePotion();
 		guerriero.throwPotion(mago);
 		if (guerriero.fight(mago)) {
 			System.out.println(guerriero.getName() + " ha sconfitto " + mago.getName());
