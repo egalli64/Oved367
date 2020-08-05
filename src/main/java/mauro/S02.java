@@ -1,14 +1,23 @@
 package mauro;
 
 public class S02 {
-    /**
-     * Average speed
-     * 
-     * @param distance in meters
-     * @param time     in seconds
-     * @return speed in meters per second
-     */
-    public static double speed(double distance, double time) {
-        return distance/time; 
-     }
+	/**
+	 * Add up all the digits in an integer
+	 * 
+	 * @param value
+	 * @return sum of digits
+	 * @throws ExciseExpection when value is negative
+	 */
+	public static int digitSum(int value) throws ExciseExpection {
+		
+		if (value < 0) {
+			throw new ExciseExpection("Negative values aren't allowed");
+		}
+		int count = 0;
+		while (value > 0) {
+			count += value % 10;
+			value /= 10;
+		}
+		return count;
+	}
 }

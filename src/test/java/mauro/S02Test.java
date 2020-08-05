@@ -1,24 +1,44 @@
 package mauro;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.closeTo;
 import static org.hamcrest.Matchers.is;
+import static org.junit.jupiter.api.Assertions.fail;
+
 import org.junit.jupiter.api.Test;
 
 class S02Test {
 
 	@Test
-    void speedPlain() {
-        double actual = S02.speed(100, 9.58);
+	void digitSumPositive() {
 
-        assertThat(actual, closeTo(10.438, 0.001));
-    }
+		try {
+			int actual = S02.digitSum(123);
+			assertThat(actual, is(6));
+		} catch (ExciseExpection e) {
+			fail(e);
+		}
+	}
 
-    @Test
-    void speedInfinity() {
-        double actual = S02.speed(100, 0);
+	@Test
+	void digitSumZero() {
+		try {
+			int actual = S02.digitSum(0);
+			assertThat(actual, is(0));
+		} catch (ExciseExpection e) {
+			fail(e);
+		}
+	}
 
-        assertThat(actual, is(Double.POSITIVE_INFINITY));
-    }
+	@Test
+	void digitSumNegative() {
+		try {
+			S02.digitSum(-123);
+			fail("An ExciseExpection was expected");
+		} catch (ExciseExpection iae) {
+			String message = iae.getMessage();
+			assertThat(message, is("Negative values aren't allowed"));
+			return;
 
+		}
+	}
 }
