@@ -49,11 +49,14 @@ public class S02 {
      * 
      * @param value
      * @return sum of digits
+     * @throws ExerciseException when value is negative
      */
-    public static int digitSum(int value) {
-        int sum = 0;
-        value = Math.abs(value);
+    public static int digitSum(int value) throws ExerciseException {
+        if (value < 0 ) {
+        	throw new ExerciseException("Negative values aren't allowed");
+        }
         
+        int sum = 0;
         while(value!=0) {
         	sum += value % 10;
         	value /= 10;

@@ -21,7 +21,7 @@ public class Main {
 						victory = ((Wizard) actors[i]).spell(actors[j]);
 					}
 
-					if (victory == true) {
+					if (victory) {
 						System.out.println(actors[i].getName() + " wins against " + actors[j].getName());
 					} else {
 						System.out.println(actors[i].getName() + " loses against " + actors[j].getName());
