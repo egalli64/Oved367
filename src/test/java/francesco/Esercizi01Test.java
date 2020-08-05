@@ -1,7 +1,6 @@
 package francesco;
 
-import static org.junit.Assert.*;
-
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class Esercizi01Test {
@@ -23,7 +22,7 @@ class Esercizi01Test {
 
 	@Test
 	void testStringReverse() {
-		assertEquals(Esercizi01.reverse("cazzo"), "ozzac");
+		assertEquals(Esercizi01.reverse("razzo"), "ozzar");
 	}
 	
 	@Test
