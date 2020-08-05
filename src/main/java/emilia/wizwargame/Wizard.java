@@ -1,4 +1,6 @@
-package emilia;
+package emilia.wizwargame;
+
+
 
 
 public class Wizard extends Actor{
@@ -8,7 +10,7 @@ public class Wizard extends Actor{
 	
 
 	public boolean spell(Actor target) {
-		if (target instanceof Wizard) {
+		if (target instanceof Warrior) {
 				return false;
 	}else {
 		return true;

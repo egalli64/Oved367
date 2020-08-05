@@ -1,4 +1,4 @@
-package emilia;
+package emilia.wizwargame;
 
 
 public abstract class Actor {
@@ -9,6 +9,7 @@ public abstract class Actor {
 			this.name = name;
 		}
 		
+	
 
 
 		@Override
@@ -16,6 +17,8 @@ public abstract class Actor {
 			
 			return "'s name is: " + name;
 		}
+		
+		
 		public String getName() {
 			return name;
 		}

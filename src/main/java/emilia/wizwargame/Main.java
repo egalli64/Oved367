@@ -1,4 +1,6 @@
-package emilia;
+package emilia.wizwargame;
+
+
 
 public class Main {
 
@@ -17,9 +19,7 @@ public class Main {
 					if (i!=j) {
 						if(actors[i] instanceof Warrior) {
 						win = ((Warrior) actors[i]).figth(actors[j]);
-					}else {
-						win = ((Wizard) actors[i]).spell(actors[j]);
-					}
+				
 						if (win == true) {
 							System.out.println(actors[i].getName()+" wins vs "+actors[j].getName());
 						}else {
@@ -30,5 +30,26 @@ public class Main {
 	
 	}
 
+}
+		boolean potion = false;
+		
+		for (int i=0; i <actors.length ; i++) {
+			for (int j=0; j <actors.length; j++) {
+					if (i!=j) {
+						if(actors[i] instanceof Wizard) {
+						win = ((Wizard) actors[i]).spell(actors[j]);
+						
+						if (potion == false) {
+							System.out.println(actors[i].getName()+" spell "+actors[j].getName());
+						}else {
+							System.out.println(actors[j].getName()+" spell "+actors[i].getName());
+						}
+			}
+		}
+	
+	}
+
+}
+		
 }
 }
