@@ -13,6 +13,6 @@ public class Actor {
 
 	@Override
 	public String toString() {
-		return  "Actor [Name=" + name + "]";
+		return "Actor [Name=" + name + "]";
 	}
 }
