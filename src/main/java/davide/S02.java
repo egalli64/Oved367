@@ -45,8 +45,13 @@ public class S02 {
 	 * 
 	 * @param value
 	 * @return sum of digits
+	 * @throws ExerciseException when value is Negative
 	 */
-	public static int digitSum(int value) {
+	public static int digitSum(int value) throws ExerciseException{
+		if(value <0) {
+			throw new ExerciseException("Not expected negative value");
+			}
+		
 		value = Math.abs(value);
 		int sum = 0;
 		while (value != 0) {
@@ -54,7 +59,7 @@ public class S02 {
 			value /= 10;
 		}
 
-		return value;
+		return sum;
 	}
 
 	/**
