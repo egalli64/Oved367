@@ -1,4 +1,4 @@
-package federicoExGame;
+package federico.exGame;
 
 public abstract class Actor {
 	private static final String DEFAULT_NAME = "???";

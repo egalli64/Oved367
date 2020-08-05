@@ -1,4 +1,4 @@
-package federicoExGame;
+package federico.exGame;
 
 public class Wizard extends Actor {
 
