@@ -1,4 +1,4 @@
-package francesco;
+package francesco.game;
 
 public abstract class Actor {
 	private String name;

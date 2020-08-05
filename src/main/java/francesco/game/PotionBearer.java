@@ -1,4 +1,4 @@
-package francesco;
+package francesco.game;
 
 public interface PotionBearer {
 void getPotions(int n);

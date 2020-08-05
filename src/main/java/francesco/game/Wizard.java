@@ -1,4 +1,4 @@
-package francesco;
+package francesco.game;
 
 public class Wizard extends Actor {
 	public Wizard(String name, int strength) {

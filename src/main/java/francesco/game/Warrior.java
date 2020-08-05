@@ -1,4 +1,4 @@
-package francesco;
+package francesco.game;
 
 public class Warrior extends Actor implements PotionBearer {
 	public Warrior() {
