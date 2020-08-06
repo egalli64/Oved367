@@ -7,11 +7,12 @@ public class S02 {
      * @param distance in meters
      * @param time     in seconds
      * @return speed in meters per second
-     *      or -infinite if time or distance are negative
+     *      
+     * @exception throws IllegalArgumentException when time or distance are negative values     
      */
     public static double speed(double distance, double time) {
     	if ((time<0)||(distance<0)) {
-    		return Double.NEGATIVE_INFINITY;
+    		throw new IllegalArgumentException("No negative values accepted");
     	}
     	else {
     		return distance / time;
