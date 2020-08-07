@@ -10,12 +10,10 @@ import java.util.logging.Logger;
 public class Sandbox {
 
 
-	public static int digitSum(int value) throws ExcerciseException, Exception2 {
+	public static int digitSum(int value) throws ExcerciseException{
 		if (value < 0) {
 			throw new ExcerciseException("Value is negative!");
 		}
-		if (value == 0)
-			throw new Exception2("Value equals zero");
 		int temp = 0;
 		for (;;) {
 			temp += value % 10;
