@@ -1,8 +1,6 @@
 package emilia.wizwargame;
 
 
-
-
 public class Warrior extends Actor {
 	public Warrior (String name) {
 		super(name);

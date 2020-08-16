@@ -5,7 +5,7 @@ package emilia.wizwargame;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 		Actor[] actors = {new Wizard ("Tom"), new Wizard ("Paul"), new Warrior ("Harry"), new Warrior ("Laurence")};
 		
 		for (Actor actor: actors) {
