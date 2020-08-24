@@ -26,7 +26,6 @@ public class SinkThem {
 	 * @param dimension board size
 	 */
 	public SinkThem(int dimension) {
-		// TODO
 		board = new char[dimension][dimension];
 		for (int i = 0; i < dimension; i++) {
 			for (int j = 0; j < dimension; j++) {
@@ -159,36 +158,34 @@ public class SinkThem {
 //	}
 
 	public static void main(String[] args) {
-		// TODO: use Scanner for user interaction
+		// use Scanner for user interaction
 		Scanner scan = new Scanner(System.in);
 
 		System.out.println("Introduci la dimensione della mappa:");
 		String d = scan.next();
 
-		// TODO: let the player choose for a (sensible) board size
+		//  let the player choose for a (sensible) board size
 		SinkThem st = new SinkThem(Integer.parseInt(d));
 
-		// TODO: place the ships randomly instead
+		//  place the ships randomly 
 		Random generator = new Random();
 		for (int i = 0; i < 3; i++) {
 			st.place(generator.nextInt(Integer.parseInt(d)), generator.nextInt(Integer.parseInt(d)));
 		}
 		st.counter = 3;
-		// TODO: use Scanner instead
-		Scanner userInR = new Scanner(System.in);
-		Scanner userInC = new Scanner(System.in);
+		//  use Scanner 
 		System.out.println(st.getBoard());
 		while (!st.done()) {
 
 			System.out.println("se vuoi uscire scrivi: E \n \n Inserisci il numero della riga da colpire:");
-			String riga = userInR.next();
+			String riga = scan.next(); 
 
 			if (riga.charAt(0) == 'E') {
 				break;
 			}
 
 			System.out.println("Inserisci il numero della colonna da colpire:");
-			String colonna = userInC.next();
+			String colonna = scan.next(); 
 			st.shoot(Integer.parseInt(riga), Integer.parseInt(colonna));
 			if (st.shoot(Integer.parseInt(riga), Integer.parseInt(colonna))) {
 				System.out.println("Hit!");
@@ -203,8 +200,6 @@ public class SinkThem {
 			}
 
 		}
-		userInR.close();
-		userInC.close();
 		scan.close();
 		System.out.println(st);
 		System.out.println("You scored " + st.getPoints());
