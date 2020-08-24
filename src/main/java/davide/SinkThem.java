@@ -1,5 +1,4 @@
 package davide;
-
 import java.util.Random;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -80,9 +79,9 @@ public class SinkThem {
 				if (board[i][j] == WRECK || board[i][j] == MISS) {
 					s = s + " " + " " + board[i][j];
 				} else
-					s = s + UNKNOWN;
+					s = s + " " + " "+ UNKNOWN;
 			}
-			s = s + "\n";
+			s = s + "\n\n";
 		}
 		return s;
 	}
@@ -95,7 +94,15 @@ public class SinkThem {
 	 * @return false if it can't be placed
 	 */
 	public boolean place(int row, int col) {
-		if (row < board.length && col < board.length) {
+		
+		if(board[row][col]==SHIP) {
+			while(board[row][col]==SHIP) {
+				Random generator = new Random();
+				row = generator.nextInt(board.length);
+				col = generator.nextInt(board.length);
+			}
+		}
+		if (row < board.length && col < board.length && board[row][col]!= SHIP) {
 			board[row][col] = SHIP;
 		}
 		return false;
@@ -113,13 +120,13 @@ public class SinkThem {
 	public boolean shoot(int row, int col) {
 		if (board[row][col] == SHIP) {
 			board[row][col] = WRECK;
-			points = +POINTS_FOR_SINK;
+			points = points + POINTS_FOR_SINK;
 			counter--;
 			return true;
 		}
 		if (board[row][col] == EMPTY) {
 			board[row][col] = MISS;
-			points = -POINTS_FOR_MISS;
+			points = points - POINTS_FOR_MISS;
 		}
 		return false;
 	}
