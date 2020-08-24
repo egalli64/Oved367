@@ -159,7 +159,7 @@ public class SinkThem {
 
 	public static void main(String[] args) {
 		// use Scanner for user interaction
-		Scanner scan = new Scanner(System.in);
+		try(Scanner scan = new Scanner(System.in)){
 
 		System.out.println("Introduci la dimensione della mappa:");
 		String d = scan.next();
@@ -200,8 +200,9 @@ public class SinkThem {
 			}
 
 		}
-		scan.close();
 		System.out.println(st);
 		System.out.println("You scored " + st.getPoints());
+		}
+
 	}
 }
