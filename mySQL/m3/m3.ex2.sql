@@ -30,16 +30,25 @@ select count(distinct manager_id)
 from employees;
 
 
--- Nome dei dipendenti che non sono manager
+-- Nome dei dipendenti che non sono manager  (con trucco)
 select employee_id, first_name, last_name
 from employees
 where employee_id not in (
-	select ifnull(manager_id, 0)
+	select distinct ifnull(manager_id, 0)
     from employees);
 
 
+-- Nome dei dipendenti che non sono manager  (senza trucco)
+select employee_id, first_name, last_name
+from employees
+where employee_id not in (
+	select distinct manager_id
+    from employees
+    where manager_id is not null);
+
+
 -- Differenza tra salario massimo e salario minimo, per ogni job_id, senza considerare dove la differenza è 0
-select job_id, max(salary), min(salary)
+select job_id, max(salary), min(salary), max(salary)-min(salary) as 'Difference'
 from employees
 group by job_id
 having max(salary) != min(salary);
