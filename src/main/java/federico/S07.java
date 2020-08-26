@@ -13,7 +13,8 @@ public class S07 {
 		if ((value>0)&&(value%2 == 0)) {
 			int i = 1;
 			int sum = 1;
-			while (i < Math.ceil(Math.sqrt(value))) {
+			int root = (int) Math.ceil(Math.sqrt(value));
+			while (i < root) {
 				i += 1;
 				if (value%i == 0) {
 					sum += (i + (value/i));
